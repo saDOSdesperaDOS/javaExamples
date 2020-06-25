@@ -1,4 +1,4 @@
-package net.mike.javaExamples.dataTypesVariablesArrays.boxingUnboxing.longFloat;
+package net.mike.javaExamples.dataTypesVariablesArrays.casting.longFloat;
 
 public class Main {
     public static void main(String... args) {
