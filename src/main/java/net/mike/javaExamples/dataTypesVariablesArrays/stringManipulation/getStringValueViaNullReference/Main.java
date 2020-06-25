@@ -1,4 +1,4 @@
-package net.mike.javaExamples.dataTypesVariablesArrays.getStringValueViaNullReference;
+package net.mike.javaExamples.dataTypesVariablesArrays.stringManipulation.getStringValueViaNullReference;
 
 public class Main {
 
