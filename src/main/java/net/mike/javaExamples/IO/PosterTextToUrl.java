@@ -1,12 +1,25 @@
 package net.mike.javaExamples.IO;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PosterTextToUrl {
+/*Считываем данные с URL и вставляем их посимвольно в список, установив кодировку UTF-8*/
+    public List<Character> getData(URL urlAddress) throws IOException {
+        int oneByte = 0;
+        List<Character> l = new ArrayList<>();
+        Reader in = new InputStreamReader(urlAddress.openStream(), Charset.forName("utf-8"));
+
+        while ((oneByte = in.read()) != -1) {
+            char c = (char) oneByte;
+            l.add(c);
+        }
+        in.close();
+        return l;
+    }
 
  public void postingText() {
     String req = "This text is posting to URL";
