@@ -1,12 +1,13 @@
-package net.mike.javaExamples.dataTypesVariablesArrays.stringManipulation.getStringValueViaNullReference;
+package net.mike.javaExamples.strings;
 
-public class Main {
+
+public class GetterStringValluesViaNullReference {
 
     public static void main(String... args) {
-        Main nullReference = null;
+        GetterStringValluesViaNullReference nullReference = null;
         System.out.println(nullReference.getString());
-    }
 
+    }
     public static String getString() {
         return "Hallo Word";
     };
