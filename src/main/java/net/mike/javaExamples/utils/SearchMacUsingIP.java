@@ -27,6 +27,12 @@ public class SearchMacUsingIP {
                     for (int i = 0; i < mac.length; i++) {
                         System.out.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : "");
                     }
+
+                    //получить MAC-адрес, не используя IP в Java
+                    InetAddress otherAddress = InetAddress.getLocalHost();
+                    NetworkInterface nwi = NetworkInterface.getByInetAddress(otherAddress);
+                    byte otherMac[] = nwi.getHardwareAddress();
+                    System.out.println(otherMac);
                 } else {
                     System.out.println("Address doesn't exist or is not accessible.");
                 }
@@ -38,5 +44,7 @@ public class SearchMacUsingIP {
         } catch (SocketException e) {
             e.printStackTrace();
         }
+
     }
+
 }
