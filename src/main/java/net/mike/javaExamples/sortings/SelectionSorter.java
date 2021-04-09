@@ -1,4 +1,4 @@
-package net.mike.javaExamples.sorting;
+package net.mike.javaExamples.sortings;
 
 public class SelectionSorter {
     public static int min(int[] array, int step) {

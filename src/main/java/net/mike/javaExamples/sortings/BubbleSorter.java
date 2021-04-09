@@ -1,8 +1,8 @@
-package net.mike.javaExamples.sorting;
+package net.mike.javaExamples.sortings;
 
 public class BubbleSorter {
     public static int[] bubbleSort(int[] array) {
-        int tmp = 0;
+        int tmp;
         boolean isSorted = false;
         while (!isSorted) {
             isSorted = true;
